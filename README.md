@@ -1,5 +1,9 @@
 [logo hier]
 
+## nächster Termin
+
+voraussichtlich am 13. Januar 2016
+
 # Was macht IT-Toshokan?
 
 Wir lesen, besprechen und bewerten IT-Fachliteratur; die Programmiersprache und Technologie ist dabei egal.
