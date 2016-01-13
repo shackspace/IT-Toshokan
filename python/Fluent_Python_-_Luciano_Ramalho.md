@@ -121,7 +121,68 @@ Folgende Patterns werden besprochen: Strategy- und Command-Pattern
 
 - The nonlocal Declaration
 
-Weitere Besprechung wird auf nächstes Mal verschoben, weil es schon echt spät ist.
+- singledispatch
+  https://www.python.org/dev/peps/pep-0443/
+  Kann sehr viele if/elif/elif ersparen. erst seit py3.4
 
-# Nächster Termin: wird angepeilt für Mitte Januar 2016. 
+- Gestackte Decoratoren werden von unten nach oben/innen nach aussen ausgeführt!
+
+- how to write parameterized decorators
+
+- Im „Further Reading“ wird erwähnt, dass es besser sein könnte Decoratoren als Klassen zu schreiben: https://github.com/GrahamDumpleton/wrapt/blob/develop/blog/README.md
+
+
+### Kapitel 8: Object References, Mutability, and Recycling
+
+- Choosing between == and is
+
+- Mutable Types as Parameter Defaults: Bad Idea
+
+- Wenn man list an eine Funktion übergibt, sollte man diese mit list(param) kopieren und mit der kopie weiterarbeiten:
+
+  ```
+  def demo(self, param=None):
+      if param is None:
+          self.param = []
+      else:
+          self.param = list(param)
+  ```
+
+- Weak References: interessant; use case fehlt uns
+
+
+### Kapitel 9: A Pythonic Object
+
+- Wie man die formatting mini language erweitern kann
+
+- Problem aus Kapitel 1 besser (more pythonic) gelöst
+
+
+### Kapitel 10: Sequence Hacking, Hashing, and Slicing
+
+- Slicing wird mit `slice()` gemacht
+
+- nette Funktion aus slice is `indices(len)`; siehe hierzu https://docs.python.org/3/reference/datamodel.html?highlight=indices#slice.indices
+
+- Dynamic Attribute Access
+
+- filter, map, reduce
+
+
+### Kapitel 11: Interfaces: From Protocols to ABCs
+
+- Typen werden nicht nur durch Klassenhierarchien sondern auch durch Erfüllung von Protokollen definiert. Man sollte für `isinstance()` deshalb die richtigen Typen verwenden: z.B. `collections.abc.Mapping` statt `dict`.
+
+ Oder auch `isinstance(x, numbers.Real)`
+
+- goose typing (Alex Martelli); als Begriff "virtual subclass"
+
+- ABCs sind hilfreich; öfter verwenden. Siehe auch Abschnitt "Subclassing an ABC".
+
+
+
+
+wir hören für heute an dieser Stelle auf und werden beim nächsten Termin weitermachen.
+
+
 
