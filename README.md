@@ -2,7 +2,7 @@
 
 ## nächster Termin
 
-voraussichtlich am 13. Januar 2016
+9. März 2016 - 19Uhr
 
 # Was macht IT-Toshokan?
 
