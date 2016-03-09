@@ -2,7 +2,7 @@
 
 ## nächster Termin
 
-9. März 2016 - 19Uhr
+- 9. März 2016 - 19Uhr
 
 # Was macht IT-Toshokan?
 
