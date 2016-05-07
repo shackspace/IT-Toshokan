@@ -3,6 +3,7 @@
 ## nächster Termin
 
 - 11. Mai 2016 - 19Uhr
+- https://www.letsmeet.click/c/it-toshokan/
 
 # Was macht IT-Toshokan?
 
