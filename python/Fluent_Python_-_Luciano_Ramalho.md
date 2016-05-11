@@ -1,8 +1,3 @@
-2015-11-11
-
-(Wir probieren das Kapitel-einzeln-besprechen-Format aus, und schauen mal wie es sich bewährt.)
-
-
 # Wir haben "Fluent Python" gelesen und Sie werden nicht glauben was danach geschah!
 
 ## Warum sollte man dieses Buch lesen?
@@ -180,9 +175,57 @@ Folgende Patterns werden besprochen: Strategy- und Command-Pattern
 - ABCs sind hilfreich; öfter verwenden. Siehe auch Abschnitt "Subclassing an ABC".
 
 
+### Kapitel 12: Inheritance: For Good or For Worse
 
+#### Erben von built-in Types
 
-wir hören für heute an dieser Stelle auf und werden beim nächsten Termin weitermachen.
+Nicht von "dict" erben, sondern von collections.UserDict, weil da alle special methods implementiert sind. "dict" ist härter optimiert und macht das nicht genau gleich.
 
+Gilt prinzipiell für alle built-in types: es gibt eigentlich immer einen entsprechenden `UserType` von dem man erben kann, und der die `__special_methods__()` aufruft.
 
+#### Multiple Inheritance
+Negativ beispiel für mixins ist Tkinter und positivbeispiel ist Django Class-Based-Views.
 
+### Kapitel 13: Operator Overloading: Doing It Right
+
+Zeigt sehr schön, was es für Operatoren gibt und wie man sie überlädt. auch den zusammenhang zwischen z.b. `__add__`, `__iadd__` und `__radd__`.
+
+### Kapitel 14. Iterables, Iterators, and Generators
+
+Man sollte sich **unbedingt** das `collections`-Package aus der STL angucken. Selbiges gilt für das `itertools`-Package.
+
+Für jeden Generator in `itertools` ist ein Anwendungsbeispiel.
+
+### Kapitel 15: Context Managers and else Blocks
+
+while else und for else sind selten ...
+try else hat schon seine berechtigung.
+
+@contextmanager ist irgendwie wie die pytest-yield-fixture :)
+
+### Kapitel 16: Coroutines / Kapitel 17: Concurrency with Futures  / Kapitel 18: Concurrency with asyncio
+
+sehr neu. hat eine einstiegshürde. sollte man sich aber mal anschauen. ist quasi irgendwann unvermeidlich, weil wir nur noch über parallelisierung skalieren können werden gehabt hatten in der zukunft.
+
+### Kapitel 19: Dynamic Attributes and Properties
+
+schön hergeleitetes Beispiel mit FrozenJSON.
+
+### Kapitel 20: Attribute Descriptors
+
+Hier wird erklärt, warum das Django ORM oder SQLAlchemy so funktionieren wie sie funktionieren. Mind-blowing.
+Ausserdem wird das `self` als erster Parameter erklärt.
+
+bronsen sagt: must read!
+
+Siehe auch: https://docs.python.org/3/howto/descriptor.html
+
+### Kapitel 21: Class Metaprogramming
+
+Hier werden Class Factories und Class Decorators erklärt. Das Descriptor Protocol wird aufgegriffen.
+
+Im Abschnitt "What happens When" wird ausgeführt, dass und welche Folgen ein @decorator vor einer Klassendefinition oder Funktion haben hat.
+
+`type` und `object` sind tatsächlich Magie.
+
+(done)
